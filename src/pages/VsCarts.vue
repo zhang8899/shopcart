@@ -43,7 +43,7 @@ export default {
         _initData(){
             CartsApi.getCarts(data=>{
                 console.log(data)
-                this.cartInfo = data
+                this.cartInfo = data[0]
                 this._counteCarts(data)
             })
         },
