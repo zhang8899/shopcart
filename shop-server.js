@@ -9,6 +9,7 @@ const db = require('./src/common/db')
 app.use(express.static("./src/assets"))
 
 app.get("/api/carts",(req,res)=>{
+
     res.header("Access-Control-Allow-Origin", "*");  
     res.header("Access-Control-Allow-Headers", "X-Requested-With");  
     res.header("Access-Control-Allow-Methods","PUT,POST,GET,DELETE,OPTIONS");  
@@ -19,6 +20,7 @@ app.get("/api/carts",(req,res)=>{
     })
 })
 app.get("/",(req,res)=>{
+    
     res.sendFile(path.join("./public/index.html"))
 })
 
